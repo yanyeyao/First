@@ -1,0 +1,63 @@
+<!DOCTYPE html >
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>css动画--元素上下跳动</title>
+		<style type="text/css">
+			
+			@keyframes bounce-down {
+				25% {
+					transform: translateY(-10px);
+				}
+
+				50%,
+				100% {
+					transform: translateY(0);
+				}
+
+				75% {
+					transform: translateY(10px);
+				}
+			}
+
+			.animate-bounce-down {
+				background: #333;
+				width: 100px;
+				height: 100px;
+				margin: 100px auto;
+				-webkit-animation: bounce-down 1.5s linear infinite;
+				animation: bounce-down 1.5s linear infinite;
+			}
+
+		
+
+			@keyframes bounce-up {
+				25% {
+					transform: translateY(10px);
+				}
+
+				50%,
+				100% {
+					transform: translateY(0);
+				}
+
+				75% {
+					transform: translateY(-10px);
+				}
+			}
+
+			.animate-bounce-up {
+				background: #ddd;
+				width: 100px;
+				height: 100px;
+				margin: 100px auto;
+				-webkit-animation: bounce-up 1.4s linear infinite;
+				animation: bounce-up 1.4s linear infinite;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="animate-bounce-up"></div>
+		<div class="animate-bounce-down"></div>
+	</body>
+</html>
