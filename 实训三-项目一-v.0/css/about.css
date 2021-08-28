@@ -1,0 +1,105 @@
+#about {
+	width: 100%;
+	height: 1000px;
+	background: #171717;
+}
+
+#about div {
+	width: 1080px;
+}
+
+#about #p1 {
+	height: 40px;
+	/* background: #ffaa00; */
+}
+
+#about #p1 ul {
+	width: 100%;
+	height: 100%;
+	margin: 0px auto;
+}
+
+#about #p1 ul li {
+	list-style: none;
+	float: left;
+	font-size: 14px;
+	line-height: 40px;
+	color: white;
+	margin-right: 15px;
+}
+
+#about #p1 ul li a {
+	color: white;
+	text-decoration: none;
+}
+
+#about #p2 {
+	/* background: #ffaa00; */
+	font-size: 25px;
+	color: white;
+	margin-top: 50px;
+}
+
+#about #p3 {
+	font-size: 16px;
+	color: #c5c5c5;
+	margin-top: 25px;
+	text-align: left;
+	line-height: 30px;
+}
+
+#about #p4 {
+	/* background: #00D300; */
+	color: #ffffff;
+	margin-top: 25px;
+}
+
+#about #p4 #zuo {
+	float: left;
+}
+
+#about #p4 div {
+	width: 40%;
+	/* background: #0000FF; */
+	position: relative;
+}
+
+#zuo p {
+	position: absolute;
+	top: 10px;
+	left: 60px;
+	font-size: 24px;
+}
+#you p {
+	position: absolute;
+	top: 10px;
+	left: 170px;
+	font-size: 24px;
+}
+
+#about #p5 {
+	font-size: 18px;
+	color: #FFFFFF;
+	margin-top: 15px;
+	text-align: left;
+	line-height: 30px;
+}
+
+#about #p6 {
+	font-size: 16px;
+	color: #c5c5c5;
+	margin-top: 15px;
+	text-align: left;
+	line-height: 40px;
+}
+
+#about #p6 div {
+	width: 23%;
+	height: 100%;
+	float: left;
+	margin-right: 10px;
+}
+
+#about #p6 #te {
+	width: 27%;
+}

@@ -1,0 +1,606 @@
+#about {
+	width: 100%;
+	height: 3350px;
+	background: #171717;
+	/* overflow: hidden; */
+}
+
+#content {
+	width: 1080px;
+	/* height: 700px; */
+	/* background: #171717; */
+	margin: 0px auto;
+}
+
+#zuo {
+	width: 70%;
+	height: 1000px;
+	float: left;
+	/* background: #ff5500; */
+}
+
+
+#p1 {
+	width: 100%;
+	height: 40px;
+	/* background: #ffaa00; */
+}
+
+#p1 ul {
+	width: 100%;
+	height: 100%;
+	margin: 0px auto;
+}
+
+#p1 ul li {
+	list-style: none;
+	float: left;
+	font-size: 14px;
+	line-height: 40px;
+	color: white;
+	margin-right: 15px;
+}
+
+#p1 ul li a {
+	color: white;
+	text-decoration: none;
+}
+
+#p2 {
+	/* background: #ffaa00; */
+	font-size: 30px;
+	color: white;
+	margin-top: 30px;
+}
+
+#p3 {
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	font-size: 14px;
+	color: #929295;
+}
+
+#p4 {
+	width: 100%;
+	height: 40px;
+	margin-top: 20px;
+	position: relative;
+}
+
+#p4 .t1 {
+	width: 25px;
+	height: 60%;
+	position: absolute;
+	top: 8px;
+}
+
+#p4 p {
+	position: absolute;
+	top: 3px;
+	left: 30px;
+	width: 80px;
+	line-height: 35px;
+	height: 100%;
+	font-size: 18px;
+	color: #929295;
+}
+
+#p4 a img {
+	width: 35px;
+	height: 100%;
+}
+
+a .t2 {
+	margin-left: 100px;
+}
+
+#p4 a .t3 {
+	margin-left: 10px;
+}
+
+#p4 a .t4 {
+	margin-left: 10px;
+}
+
+#p5 {
+	width: 100%;
+	/* height: 700px; */
+	/* margin-top: 20px; */
+	/* background: #0055FF; */
+	/* overflow: hidden; */
+}
+
+#p5 p {
+	font-size: 16px;
+	/* overflow: hidden; */
+	color: hsla(0, 0%, 100%, .8) !important;
+}
+
+#p5 .p1 {
+	line-height: 100px;
+	margin-left: 250px;
+}
+
+#p5 .p2 {
+	line-height: 100px;
+	margin-left: 150px;
+}
+
+#p5 .p3 {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+#p5 .p4 {
+	line-height: 100px;
+	margin-left: 300px;
+}
+
+#p5 img {
+	width: 100%;
+}
+
+#p5 .t1 {
+	height: 500px;
+}
+
+#p5 .t2 {
+	height: 600px;
+}
+
+#p5 .t3 {
+	height: 700px;
+}
+
+#p6 {
+	margin-top: 50px;
+	width: 100%;
+	height: 800px;
+	/* background: #0000FF; */
+}
+
+#pb {
+	/* background: #ffaa00; */
+	font-size: 25px;
+	color: white;
+	margin-top: 50px;
+}
+
+#pc {
+	width: 100%;
+	height: 450px;
+	margin-top: 30px;
+	/* background: #00D300; */
+}
+
+#pd {
+	width: 100%;
+	height: 150px;
+	/* background: #0000FF; */
+	position: relative;
+}
+
+#biao {
+	width: 76%;
+	height: 100%;
+	float: left;
+	/* background: #ff5500; */
+}
+
+#o {
+	width: 100%;
+	font-size: 20px;
+	color: #FFFFFF;
+	margin-top: 10px;
+	line-height: 33px;
+}
+
+#o:hover {
+	color: red;
+}
+
+#t {
+	width: 100%;
+	font-size: 16px;
+	margin-top: 8px;
+	/* line-height: 22px; */
+	color: hsla(0, 0%, 100%, .8);
+}
+
+#r {
+	width: 100%;
+	font-size: 16px;
+	margin-top: 30px;
+	/* line-height: 22px; */
+	color: hsla(0, 0%, 100%, .5);
+}
+
+#tp {
+	width: 24%;
+	height: 100%;
+	float: right;
+	/* background: #ffff00; */
+}
+
+#tp img {
+	width: 90%;
+	height: 80%;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+/* 相关游戏*/
+.Same-Game {
+	width: 100%;
+	margin-top: 80px;
+	/* 	width: 100%; */
+	height: auto;
+	margin: 0 auto;
+	/* background-color: #007AFF; */
+}
+
+.hotgame_title {
+	width: auto;
+	height: auto;
+}
+
+.hotgame_title>span {
+	cursor: pointer;
+	display: block;
+	width: auto;
+	height: 33px;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 33px;
+	color: #FFFFFF;
+	margin-bottom: 27px;
+}
+
+.hotgame_title2>span {
+	margin-bottom: 0;
+}
+
+.role_app {
+	width: 100%;
+	height: auto;
+	margin-bottom: 60px;
+	/* background-color: #1D1C1F; */
+}
+
+.role_app::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.role_app_box>li {
+	cursor: pointer;
+	width: 168px;
+	float: left;
+	padding-right: 14px;
+	height: 264px;
+	display: block;
+	list-style: none;
+	/* background-color: olive; */
+}
+
+.role_app_box>li:nth-child(4n) {
+	padding-right: 0px;
+}
+
+.roleapp_box {
+	width: 100%;
+	height: 160px;
+	margin-top: 100px;
+	padding: 54px 5px 0;
+	box-sizing: border-box;
+	background-color: #2e2e33;
+	position: relative;
+	transition: all .3s;
+	position: relative;
+}
+
+.roleapp_box:hover {
+	background-color: #42424c;
+}
+
+.roleapp_box:hover>.roleapp_box_txet2 {
+	background-color: #FF3F3F;
+}
+
+.roleapp_box:hover>.roleapp_text,
+.roleapp_box:hover>.roleapp_text2 {
+	display: block;
+}
+
+.roleapp_text,
+.roleapp_text2 {
+	display: none;
+	transition: all .3s;
+	width: 290px;
+	height: 250px;
+	position: absolute;
+	top: 0px;
+	z-index: 11;
+	background-color: #42424c;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.roleapp_text1 {
+	left: 168px;
+	border-left: 10px solid #1D1C1F;
+}
+
+.roleapp_text2 {
+	right: 168px;
+	border-right: 10px solid #1D1C1F;
+}
+
+.roleapp_text1>p,
+.roleapp_text2>p {
+	width: 100%;
+	height: 200px;
+	font-size: 14px;
+	line-height: 25px;
+	color: #FFFFFF;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-line-clamp: 8;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+}
+
+.roleapp_text1>span,
+.roleapp_text2>span {
+	width: 100%;
+	height: 30px;
+	font-size: 14px;
+	line-height: 40px;
+	color: #ff3f3f;
+	text-align: right;
+	/* background-color: antiquewhite; */
+	display: block;
+}
+
+.roleapp_box_img {
+	z-index: 10;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 96px;
+	height: 96px;
+}
+
+.roleapp_box_img img {
+	width: 100%;
+	height: 100%;
+}
+
+.roleapp_box_txet {
+	/* margin-top: 58px; */
+	width: 100%;
+	height: 50px;
+}
+
+.roleapp_box_txet>p,
+.roleapp_box_txet>span {
+	height: 26px;
+	width: 100%;
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+	line-height: 26px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.roleapp_box_txet>span {
+	display: block;
+	margin-top: 4px;
+	height: 20px;
+	font-size: 14px;
+	color: hsla(0, 0%, 100%, .5);
+	height: 20px;
+	line-height: 20px;
+	width: 100%;
+}
+
+.roleapp_box_txet2 {
+	margin: 10px auto 0;
+	color: #FFFFFF;
+	text-align: center;
+	width: 84px;
+	height: 36px;
+	line-height: 36px;
+	border-radius: 8px 0 8px 0;
+	font-size: 14px;
+	background-color: #42424c;
+	transition: all .3s;
+}
+
+#you {
+	width: 28%;
+	height: 800px;
+	float: right;
+	/* background: #ff5500; */
+	margin-top: 50px;
+}
+
+#you a {
+	text-decoration: none;
+}
+
+#shang {
+	width: 100%;
+	height: 370px;
+	/* float: right; */
+	background: #2E2E33;
+	overflow: hidden;
+	/* margin-top: 50px; */
+}
+
+#stu {
+	width: 100%;
+	height: 200px;
+}
+
+#stu img {
+	width: 100%;
+	height: 100%;
+}
+
+#span {
+	width: 100%;
+	/* height: 50px; */
+	/* background: #0000FF; */
+	overflow: hidden;
+	position: relative;
+}
+
+#span p {
+	color: #FFFFFF;
+	font-size: 24px;
+	line-height: 30px;
+	margin-top: 20px;
+	margin-left: 30px;
+}
+
+#xia {
+	width: 80px;
+	height: 40px;
+	position: absolute;
+	right: 20px;
+	top: 15px;
+	background-color: #ff3f3f;
+	text-align: center;
+	line-height: 35px;
+	border-radius: 10px 0px 18px 0px;
+	color: #FFFFFF;
+	font-size: 14px;
+}
+
+#xia:hover {
+	background: #FF5252;
+}
+
+#mes {
+	width: 100%;
+	height: 100px;
+	margin-top: 10px;
+	position: relative;
+}
+
+#geng {
+	width: 25%;
+	height: 100%;
+	/* background: #0000FF; */
+	margin-left: 20px;
+	float: left;
+}
+
+#geng p {
+	font-size: 14px;
+	color: #929295;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+#wan {
+	width: 65%;
+	height: 100%;
+	/* background: #0000FF; */
+	/* margin-left: 20px; */
+	float: right;
+}
+
+#wan p {
+	font-size: 14px;
+	color: #fff;
+	/* margin-left: 10px; */
+	margin-top: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+#zai {
+	width: 100%;
+	height: 430px;
+	/* float: right; */
+	background: #2E2E33;
+	overflow: hidden;
+	margin-top: 30px;
+	overflow: hidden;
+}
+
+#zai a {
+	text-decoration: none;
+}
+
+#yi {
+	width: 94%;
+	height: 50px;
+	margin: 30px auto;
+	/* background: #0000FF; */
+}
+
+#z0 {
+	width: 50px;
+	height: 100%;
+	margin-right: 15px;
+	float: left;
+	/* background: #0000FF; */
+}
+
+#z0 img {
+	width: 100%;
+	height: 100%;
+}
+
+#z1 {
+	width: 120px;
+	height: 100%;
+	/* background: #0000FF; */
+	float: left;
+}
+
+#zp1 {
+	color: #F0FFFF;
+	font-size: 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+#zp1:hover{
+	color: red;
+}
+
+#zp2 {
+	font-size: 14px;
+	color: hsla(0, 0%, 100%, .5);
+	/* margin-left: 10px; */
+	/* margin-top: 10px; */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+#zd {
+	width: 84px;
+	height: 36px;
+	line-height: 36px;
+	background: #ffff7f;
+	float: right;
+	border-radius: 8px 0 8px 0;
+	font-size: 14px;
+	text-align: center;
+	background-color: #42424c;
+	color: #FFFFFF;
+}
+#zd:hover{
+	background-color: #FF5252;
+}

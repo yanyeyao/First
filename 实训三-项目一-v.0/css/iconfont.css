@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2621457 */
+  src: url('iconfont.woff2?t=1626866761478') format('woff2'),
+       url('iconfont.woff?t=1626866761478') format('woff'),
+       url('iconfont.ttf?t=1626866761478') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shoucang:before {
+  content: "\e759";
+}
+
+.icon-xiala-copy:before {
+  content: "\e608";
+}
+
+.icon-inquiry-list-follow:before {
+  content: "\e606";
+}
+
+.icon-xiala2:before {
+  content: "\e607";
+}
+
+.icon-wode:before {
+  content: "\e603";
+}
+
+.icon-_collect_before:before {
+  content: "\e605";
+}
+
+.icon-rili:before {
+  content: "\e8ad";
+}
+
+.icon-shezhi:before {
+  content: "\e8ac";
+}
+
+.icon-gouwuche-copy:before {
+  content: "\e601";
+}
+
+.icon-gouwuche:before {
+  content: "\e602";
+}
+
+.icon-gouwuche1:before {
+  content: "\e68f";
+}
+
+.icon-gouwuchekong:before {
+  content: "\e600";
+}
+
+.icon-shoucangjia:before {
+  content: "\e793";
+}
+
+.icon-02:before {
+  content: "\e604";
+}
+
+.icon-xiala1:before {
+  content: "\e647";
+}
+
+.icon-xiala:before {
+  content: "\e682";
+}
+

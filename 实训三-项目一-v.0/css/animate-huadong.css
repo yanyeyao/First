@@ -1,0 +1,42 @@
+@keyframes bounce-down {
+	25% {
+		transform: translateY(-10px);
+	}
+
+	50%,
+	100% {
+		transform: translateY(0);
+	}
+
+	75% {
+		transform: translateY(10px);
+	}
+}
+
+.animate-bounce-down {
+	background: #333;
+	-webkit-animation: bounce-down 1.5s linear infinite;
+	animation: bounce-down 1.5s linear infinite;
+}
+
+
+
+@keyframes bounce-up {
+	25% {
+		transform: translateY(10px);
+	}
+
+	50%,
+	100% {
+		transform: translateY(0);
+	}
+
+	75% {
+		transform: translateY(-10px);
+	}
+}
+
+.animate-bounce-up {
+	-webkit-animation: bounce-up 1.4s linear infinite;
+	animation: bounce-up 1.4s linear infinite;
+}

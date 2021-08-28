@@ -1,0 +1,17 @@
+.back-top {
+	position: relative;
+	display: none;
+}
+
+.back-top a {
+	position: fixed;
+	right: 80px;
+	bottom: 80px;
+	background: url(../img/backTop.png);
+	width: 52px;
+	height: 52px;
+}
+
+.back-top a:hover {
+	background: url(../img/backTop2.png);
+}

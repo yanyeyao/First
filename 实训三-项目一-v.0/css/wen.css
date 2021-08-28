@@ -1,0 +1,132 @@
+#wen {
+	width: 100%;
+	height: 1300px;
+	background: #1D1C1F;
+	/* background: url(img/T2.png); */
+	background-size: cover;
+	overflow: hidden;
+}
+
+#wen div {
+	width: 1080px;
+}
+
+#wen #p7 {
+	/* background: #ffaa00; */
+	font-size: 40px;
+	color: white;
+	margin-top: 80px;
+}
+
+#wen #p8 {
+	width: 1080px;
+	height: 450px;
+	/* background: #008B8B; */
+	box-sizing: border-box;
+	/* padding-bottom: 40px; */
+	/* border-bottom: 1px solid #353338; */
+	margin: 30px auto;
+}
+
+#wen #p8 #dh {
+	width: 340px;
+	float: left;
+	height: 100%;
+	background: rgba(46, 46, 51, .4);
+	margin-right: 20px;
+}
+
+#wen #p8 #dh li {
+	list-style: none;
+	/* margin-top: 20px; */
+	/* margin-left: 10px; */
+	color: white;
+}
+
+#wen #p8 #dh li span {
+	display: block;
+	/* position: absolute; */
+	font-size: 24px;
+	padding: 10px 15px;
+	background: rgba(100, 100, 111, 0.4);
+}
+
+#wen #p8 #dh li a {
+	text-decoration: none;
+	font-size: 15px;
+	display: block;
+	margin-top: 5px;
+	padding: 10px 15px;
+	color: #FFFFFF;
+}
+
+#wen #p8 #dh li a:hover {
+	color: red;
+}
+
+#wen #p9 {
+	width: 1080px;
+	height: 450px;
+	/* background: #008B8B; */
+	box-sizing: border-box;
+	/* padding-bottom: 40px; */
+	/* border-bottom: 1px solid #353338; */
+	margin: 30px auto;
+}
+
+#wen #p9 #dq {
+	width: 340px;
+	float: left;
+	height: 100%;
+	background: rgba(46, 46, 51, .4);
+	margin-right: 20px;
+	margin-top: 30px;
+	/* overflow: hidden; */
+	position: relative;
+}
+
+#wen #p9 #dq li {
+	list-style: none;
+	/* margin-top: 20px; */
+	/* margin-left: 10px; */
+	color: white;
+	/* overflow: hidden; */
+}
+
+#wen #p9 #dq li span {
+	display: block;
+	/* position: absolute; */
+	font-size: 24px;
+	padding: 10px 15px;
+	padding-left: 65px;
+	/* margin-left: 30px; */
+	background: rgba(100, 100, 111, 0.4);
+}
+
+#wen #p9 #dq div {
+	width: 60px;
+	height: 70px;
+	position: absolute;
+	top: -15px;
+	left: 5px;
+	/* background: #0000FF; */
+}
+
+#wen #p9 #dq div img {
+	width: 100%;
+	height: 100%;
+	/* position: absolute; */
+}
+
+#wen #p9 #dq li a {
+	text-decoration: none;
+	font-size: 15px;
+	display: block;
+	margin-top: 5px;
+	padding: 10px 15px;
+	color: #FFFFFF;
+}
+
+#wen #p9 #dq li a:hover {
+	color: red;
+}

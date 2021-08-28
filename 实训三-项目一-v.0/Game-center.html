@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>安卓模拟器关于我们-腾讯手游助手</title>
+		<link rel="icon" href="img/logo.ico">
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/swiper-bundle.css"/>
+	<link rel="stylesheet" type="text/css" href="css/Game-center.css"/>
+	<link rel="stylesheet" type="text/css" href="css/foot.css"/>
+	<body>
+		<!-- /* 头部 */ -->
+		<div class="header">
+			<div class="h_text">
+				<div class="header-logo">
+					<img src="img/Game_logo.png" >
+				</div>
+				<div class="header-nav">
+					<ul class="nav_list">
+						<li class="nav_li"><a href="index.html">首页</a></li>
+						<li class="nav_li nav_hover" style="border-bottom:4px solid #ff3f3f;">
+							<a href="Game-center.html">游戏中心</a>
+							<img src="img/xiala_icon.png" >
+							<div class="nav_nav">
+								<ul>
+									<li><span name="hotgame_app">热门游戏</span></li>
+									<li><span name="hotgame_app">角色扮演</span></li>
+									<li><span name="hotgame_app">动作冒险</span></li>
+									<li><span name="hotgame_app">体育竞速</span></li>
+								</ul>
+								<ul>
+									<li><span name="hotgame_app">经营策略</span></li>
+									<li><span name="hotgame_app">飞行射击</span></li>
+									<li><span name="hotgame_app">休闲益智</span></li>
+									<li><span name="hotgame_app">棋牌中心</span></li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav_li nav_hover">
+							<a href="News.html">资讯中心</a>
+							<img src="img/xiala_icon.png" >
+							<div class="nav_nav2">
+								<ul>
+									<li><span>全部</span></li>
+									<li><span>教程</span></li>
+									<li><span>评测</span></li>
+									<li><span>攻略</span></li>
+								</ul>
+								<ul>
+									<li><span>公告</span></li>
+								</ul>
+							</div>
+						</li>
+						<!-- <li class="nav_li"><a href="#">玩家论坛</a></li> -->
+						<li class="nav_li"><a href="关于.html">关于我们</a></li>
+						<li class="nav_li"><a href="问题.html">常见问题</a></li>
+					</ul>
+				</div>
+				<div class="Downloadbtn">
+					<span>下载客户端</span>
+				</div>
+			</div>
+		</div>
+		<!-- 中间 -->
+		<div class="center">
+			<div class="center_box">
+				<!-- /* 导航栏 */ -->
+				<div class="center_nav">
+					<ul id="center_nav2">
+						<li><span name="nav_sortapp"></span></li>
+					</ul>
+				</div>
+				<!-- 轮播图 -->
+				<div class="center_swiper">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide" >
+								<img src="img/swiper1.jpeg">
+								<div class="swiper-text">
+									<h1 class="swiper_title">标题</h1>
+									<h2 class="swiper_title2">文件</h2>
+									<div class="swiper_Downloadbtn">
+										<span>下载客户端</span>
+									</div>
+								</div>
+							</div>
+						 </div>
+						<!-- Add Pagination -->
+						<div class="swiper-pagination"></div>
+						<!-- Add Arrows -->
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+				</div>
+			
+				<!-- 热门游戏 -->
+				<div class="center_hotgame" name="sort_app">
+					<div class="hotgame_title">
+						<span>热门游戏</span>
+					</div>
+					<ul class="hotgame_box">
+						<li>
+							<div class="hotgame_img">
+								<img src="img/game_img1.jpeg" >
+								<div class="hotgame_img_text">
+									<div class="hotgame_img_text2">
+										<div class="hotgame_img_text3">
+											Tetris官方正版授权俄罗斯方块手游
+										</div>
+										<div class="hotgame_img_text4">
+											游戏详情
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="hotgame_download">
+								<div class="hotgame_dl">
+									<img class="hotgame_dl_img" src="img/game_pic1.png" >
+									<div class="hotgame_dl_text">
+										<p>俄罗斯方块环游记</p>
+										<span>俄罗斯方块手游</span>
+									</div>
+								</div>
+								<div class="hotgame_dr">
+									<span>下载</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+				<!-- 角色扮演 -->
+				<div class="role_playing" name="sort_app">
+					<div class="hotgame_title hotgame_title2">
+						<span>角色扮演</span>
+					</div>
+					<div class="role_app">
+						<ul class="role_app_box Roleapp">
+							<li>
+								<div class="roleapp_box" onclick="GoTo_InformationPage(this)" gamevalue="001">
+									<div class="roleapp_box_img">
+										<img src="img/app_img1.png" >
+									</div>
+									<div class="roleapp_box_txet">
+										<p>斗罗大陆武魂觉醒</p>
+										<span>你从未见过的全新斗罗</span>
+									</div>
+									<div class="roleapp_box_txet2">
+										下载
+									</div>
+									<div class="roleapp_text">
+										<p>
+											文本内容
+										</p>
+										<span>游戏详情</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<!-- 动作冒险 -->
+				<div class="role_playing" name="sort_app">
+					<div class="hotgame_title hotgame_title2">
+						<span>动作冒险</span>
+					</div>
+					<div class="role_app">
+						<ul class="role_app_box Actapp">
+							<li>
+								<div class="roleapp_box">
+									<div class="roleapp_box_img">
+										<img src="img/app_img1.png" >
+									</div>
+									<div class="roleapp_box_txet">
+										<p>斗罗大陆武魂觉醒</p>
+										<span>你从未见过的全新斗罗</span>
+									</div>
+									<div class="roleapp_box_txet2">
+										下载
+									</div>
+									<div class="roleapp_text">
+										<p>
+											文本内容	
+										</p>
+										<span>游戏详情</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<!-- 体育竞技 -->
+				<div class="role_playing" name="sort_app">
+					<div class="hotgame_title hotgame_title2">
+						<span>体育竞技</span>
+					</div>
+					<div class="role_app">
+						<ul class="role_app_box Sportapp">
+							<li>
+								<div class="roleapp_box">
+									<div class="roleapp_box_img">
+										<img src="img/app_img1.png" >
+									</div>
+									<div class="roleapp_box_txet">
+										<p>斗罗大陆武魂觉醒</p>
+										<span>你从未见过的全新斗罗</span>
+									</div>
+									<div class="roleapp_box_txet2">
+										下载
+									</div>
+									<div class="roleapp_text">
+										<p>
+											文本内容	
+										</p>
+										<span>游戏详情</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<!-- 经营策略 -->
+				<div class="role_playing" name="sort_app">
+					<div class="hotgame_title hotgame_title2">
+						<span>经营策略</span>
+					</div>
+					<div class="role_app">
+						<ul class="role_app_box Manegeapp">
+							<li>
+								<div class="roleapp_box">
+									<div class="roleapp_box_img">
+										<img src="img/app_img1.png" >
+									</div>
+									<div class="roleapp_box_txet">
+										<p>斗罗大陆武魂觉醒</p>
+										<span>你从未见过的全新斗罗</span>
+									</div>
+									<div class="roleapp_box_txet2">
+										下载
+									</div>
+									<div class="roleapp_text">
+										<p>
+											文本内容	
+										</p>
+										<span>游戏详情</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<!-- 飞行射击 -->
+				<div class="role_playing" name="sort_app">
+					<div class="hotgame_title hotgame_title2">
+						<span>飞行射击</span>
+					</div>
+					<div class="role_app">
+						<ul class="role_app_box Flyapp">
+							<li>
+								<div class="roleapp_box">
+									<div class="roleapp_box_img">
+										<img src="img/app_img1.png" >
+									</div>
+									<div class="roleapp_box_txet">
+										<p>斗罗大陆武魂觉醒</p>
+										<span>你从未见过的全新斗罗</span>
+									</div>
+									<div class="roleapp_box_txet2">
+										下载
+									</div>
+									<div class="roleapp_text">
+										<p>
+											文本内容	
+										</p>
+										<span>游戏详情</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<!-- 休闲益智 -->
+				<div class="role_playing" name="sort_app">
+					<div class="hotgame_title hotgame_title2">
+						<span>休闲益智</span>
+					</div>
+					<div class="role_app">
+						<ul class="role_app_box Restapp">
+							<li>
+								<div class="roleapp_box">
+									<div class="roleapp_box_img">
+										<img src="img/app_img1.png" >
+									</div>
+									<div class="roleapp_box_txet">
+										<p>斗罗大陆武魂觉醒</p>
+										<span>你从未见过的全新斗罗</span>
+									</div>
+									<div class="roleapp_box_txet2">
+										下载
+									</div>
+									<div class="roleapp_text">
+										<p>
+											文本内容	
+										</p>
+										<span>游戏详情</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<!-- 棋牌中心 -->
+				<div class="role_playing" name="sort_app">
+					<div class="hotgame_title hotgame_title2">
+						<span>棋牌中心</span>
+					</div>
+					<div class="role_app">
+						<ul class="role_app_box Chessapp">
+							<li>
+								<div class="roleapp_box">
+									<div class="roleapp_box_img">
+										<img src="img/app_img1.png" >
+									</div>
+									<div class="roleapp_box_txet">
+										<p>斗罗大陆武魂觉醒</p>
+										<span>你从未见过的全新斗罗</span>
+									</div>
+									<div class="roleapp_box_txet2">
+										下载
+									</div>
+									<div class="roleapp_text">
+										<p>
+											文本内容	
+										</p>
+										<span>游戏详情</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<!-- 脚部 -->
+		<div id="foot">
+			<div id="first">
+				<div id="tu">
+					<img src="" alt="">
+				</div>
+				<div id="good"></div>
+				<div id="dl"></div>
+			</div>
+			<div id="second">
+				<div id="do">
+					<ul id="dy">
+						<li><span id="s"></span></li>
+						<li><a href="" id="a1" class="dian"></a></li>
+						<li><a href="" id="a2" class="dian"></a></li>
+						<li><a href="" id="a3" class="dian"></a></li>
+						<li><a href="" id="a4" class="dian"></a></li>
+						<li><a href="" id="a5" class="dian"></a></li>
+					</ul>
+				</div>
+				<div id="dt">
+					<ul id="de">
+						<li><span id="s"></span></li>
+						<li><a href="" id="a1" class="dian"></a></li>
+						<li><a href="" id="a2" class="dian"></a></li>
+						<li><a href="" id="a1" class="dian"></a></li>
+						<li><a href="" id="a2" class="dian"></a></li>
+					</ul>
+					<div id="xin">
+						<p>官方微信</p>
+						<img src="img/T3.png">
+					</div>
+					<div id="bo">
+						<p>官方微博</p>
+						<img src="img/T4.png">
+					</div>
+				</div>
+				<div id="dr">
+					<img src="img/T5.png">
+					<div id="ban">
+						<span>版本号: 4.0.161.80</span>
+						<span>Copyright O2021@ Tencent. All Rights Reserved. 腾讯手游助手&nbsp;&nbsp;版权所有</span>
+						<a href="">粤B2-20090059</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 回到顶部 -->
+		<div class="goTop">
+			<!-- <img src="img/game_gotop.png" > -->
+		</div>
+	<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swiper-bundle.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/UpGame_Center.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/goTop.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/onclick-fixed.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/foot.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/GoTo-InformationPage.js" type="text/javascript" charset="utf-8"></script>
+	<!-- //轮播图 -->
+	<script>
+	//轮播图
+	   var swiper = new Swiper('.swiper-container', {
+	      spaceBetween: 30,//每个滑块距右边的距离
+	      centeredSlides: true,
+		  // grabCursor: true,//鼠标光标
+		  loop:true,//图片无限转动
+		  effect: 'fade',
+	      autoplay: {
+	        delay: 2500,//轮播的时间
+	        disableOnInteraction: false,
+	      },
+	      pagination: {
+	        el: '.swiper-pagination',
+	        clickable: true,
+	      },
+	      navigation: {
+	        nextEl: '.swiper-button-next',
+	        prevEl: '.swiper-button-prev',
+	      },
+		  
+	    });
+		// 鼠标移入停止自动滚动
+		$('.swiper-container').mouseenter(function() {
+		    swiper.autoplay.stop();
+			// Console.log(1);
+		});
+		// 鼠标移出开始自动滚动
+		$('.swiper-container').mouseleave(function() {
+		    swiper.autoplay.start();
+		});
+	</script>
+	<!-- 脚部 -->
+	<script type="text/javascript">
+	function centerfoot_logo(){
+		var tu = document.getElementById("tu");
+		tu.innerHTML = '<img src="img/T1.png" alt="">';
+		var good = document.getElementById("good");
+		good.innerHTML = '全球最快的电脑安卓模拟器，键鼠组合操控，精准灵活体验更佳';
+		var dl = document.getElementById("dl");
+		dl.innerHTML = '下载客户端';
+		dl.onmouseover = function() {
+			dl.style.background = "rgba(255,63,63,0.8)";
+		}
+		dl.onmouseout = function() {
+			dl.style.background = "#ff3f3f";
+		}
+	}
+	centerfoot_logo();
+	</script>
+	</body>
+</html>

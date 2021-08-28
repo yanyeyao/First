@@ -1,0 +1,144 @@
+.header {
+	width: 100%;
+	height: 80px;
+	background: #26252B;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	z-index: 40;
+}
+
+.h_text {
+	height: 100%;
+	width: 1080px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	flex-flow: row;
+}
+
+.header-logo {
+	width: 200px;
+	height: 36px;
+}
+
+.header-logo>img {
+	width: 100%;
+	height: 100%;
+}
+
+.header-nav {
+	height: 100%;
+	/* width: 730px; */
+	flex: 1 1;
+	position: relative;
+	z-index: 60;
+}
+
+.nav_list {
+	padding-left: 10%;
+	box-sizing: border-box;
+	width: 100%;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	z-index: 70;
+}
+
+.nav_li {
+	list-style: none;
+	float: left;
+	width: auto;
+	height: 80px;
+	line-height: 80px;
+	padding: 0px 25px;
+	cursor: pointer;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 80;
+}
+
+.nav_li a {
+	float: left;
+	display: block;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-size: 16px;
+}
+
+.nav_list li img {
+	width: 12px;
+	height: 12px;
+}
+
+.nav_nav,
+.nav_nav2 {
+	display: none;
+	position: absolute;
+	z-index: 9999;
+	top: 80px;
+	left: 0;
+	width: 184px;
+	height: auto;
+	border-top: 8px solid #1D1C1F;
+	background: rgba(42, 42, 51, 0.9);
+}
+
+.nav_nav2 {
+	width: 128px;
+}
+
+.nav_nav>ul,
+.nav_nav2>ul {
+	float: left;
+	position: relative;
+	z-index: 999999;
+}
+
+.nav_nav>ul>li,
+.nav_nav2>ul>li {
+	text-align: center;
+	line-height: 40px;
+	display: block;
+	list-style: none;
+	width: auto;
+	height: auto;
+	padding: 0px 18px;
+}
+
+.nav_nav2>ul>li {
+	padding: 0px 18px;
+}
+
+.nav_nav>ul>li>span,
+.nav_nav2>ul>li>span {
+	font-size: 14px;
+	color: #FFFFFF;
+}
+
+.nav_nav>ul>li>span:hover,
+.nav_nav2>ul>li>span:hover {
+	color: #ff3f3f;
+}
+
+.nav_hover:hover .nav_nav,.nav_hover:hover .nav_nav2{
+	border: #00FF00;
+	display: block;
+}
+.Downloadbtn {
+	width: 120px;
+	height: 40px;
+	text-align: center;
+	border-radius: 8px 0 8px 0;
+	cursor: pointer;
+	font-size: 14px;
+	color: #fff;
+	line-height: 40px;
+	letter-spacing: 0;
+	background-color: #ff3f3f;
+}
+
+.Downloadbtn:hover {
+	background-color: #ff5252;
+}
