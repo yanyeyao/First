@@ -1,0 +1,12 @@
+1. git init
+2. git add .
+3. git commit -m "备注"
+4. git remote add origin git@github.com:yanyeyao/First.git
+5. git push -u origin master / git push origin master (如果报错error: failed to push some refs to)
+   问题原因：远程库与本地库不一致造成的，在hint中也有提示把远程库同步到本地库就可以了。
+
+   解决办法：使用命令行：
+
+   git pull --rebase origin master
+6. git push origin master
+ 
