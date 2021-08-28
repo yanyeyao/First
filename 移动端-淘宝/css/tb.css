@@ -1,0 +1,409 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 0;
+}
+
+html {
+	font-size: 100px;
+}
+
+.header0 {
+	display: flex;
+	padding-top: 0.37rem;
+	box-sizing: border-box;
+}
+
+.header {
+	position: fixed;
+	left: 0rem;
+	top: 0rem;
+	width: 100%;
+	background-color: rgb(255, 133, 42);
+	height: 0.37rem;
+	z-index: 99999;
+}
+
+.head {
+	width: 100%;
+	box-sizing: border-box;
+	height: 0.37rem;
+	padding: 0.06rem 0.09rem 0.06rem 0.42rem;
+	background-image: url(../img/tblogo.png);
+	background-repeat: no-repeat;
+	background-size: 0.27rem 0.2rem;
+	background-position: 0.09rem center;
+}
+
+.h_search a {
+	display: block;
+	font-size: 0;
+	background-color: rgb(255, 78, 34);
+	text-align: center;
+	border-radius: 0.04rem;
+}
+
+.h_search a span {
+	display: inline-block;
+	font-weight: 600;
+	height: 0.25rem;
+	line-height: 0.25rem;
+	font-size: 0.13rem;
+	color: rgb(240, 224, 220);
+}
+
+.lbt {
+	width: 100%;
+	height: 1.02rem;
+	position: relative;
+}
+
+.swiper-container {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-container2 {
+	height: 0.31rem;
+	overflow: hidden;
+}
+
+.swiper-container2 .swiper-wrapper div {
+	height: 0.31rem;
+}
+
+.swiper-pagination {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 0.2rem;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 0.18rem;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.swiper-slide img {
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-pagination-bullet {
+	width: 0.15rem;
+	height: 0.15rem;
+	text-align: center;
+	line-height: 0.15rem;
+	font-size: 0.1rem;
+	color: #000;
+	opacity: 1;
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+	bottom: 0rem;
+}
+
+.swiper-pagination-bullet-active {
+	color: #fff;
+	background: #007aff;
+}
+
+#list {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	padding: 0rem 0rem 0.3rem 0.1rem;
+}
+
+#list ul {
+	width: 6.5rem;
+}
+
+#list ul li {
+	text-align: center;
+	font-size: 0;
+	margin-top: 0.1rem;
+	margin-right: 0.1rem;
+	list-style: none;
+	width: 0.61rem;
+	height: 0.67rem;
+	/* background-color: #00D300; */
+	/* padding: 0.1rem 0.1rem; */
+	box-sizing: border-box;
+	float: left;
+}
+
+#list ul li img {
+	width: 100%;
+	height: 0.48rem;
+}
+
+#list ul li p {
+	font-size: 0.11rem;
+	line-height: 0.15rem;
+	color: rgb(102, 102, 102);
+	margin-top: 0.04rem;
+}
+
+.iScrollHorizontalScrollbar {
+	position: absolute;
+	z-index: 9999;
+	overflow: hidden;
+
+	bottom: 0.1rem;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 0.5rem;
+	background-color: rgb(212, 216, 222);
+	border-radius: 0.03rem;
+	height: 0.05rem;
+}
+
+.iScrollIndicator {
+	position: absolute;
+	height: 100%;
+	border-radius: 8px;
+	background-color: rgb(255, 109, 42);
+
+}
+
+.content2 {
+	width: 100%;
+	height: 10rem;
+	box-sizing: border-box;
+	background-color: #f2f2f2;
+	padding: 0.15rem 0.1rem 0 0.1rem;
+}
+
+.content2 .ct2_1 {
+	width: 100%;
+	background-color: #FFFFFF;
+	border-radius: 0.1rem 0.1rem 0 0;
+	padding: 0.1rem 0.1rem 0 0.1rem;
+	display: flex;
+	flex-direction: row;
+}
+
+.left,
+.right {
+	width: 50%;
+	/* border: 1px solid red; */
+	height: 3.1rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.left {
+	border-right: 1px solid rgb(242, 242, 242);
+}
+
+.left_div,
+.right_div {
+	height: 33.33%;
+	display: flex;
+	flex-direction: column;
+	font-size: 0;
+}
+
+.l_top,
+.r_top {
+	height: 17%;
+	width: 100%;
+}
+
+.l_top img,
+.r_top img {
+	height: 100%;
+	width: 100%;
+}
+
+.l_bt,
+.r_bt {
+	height: 83%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+
+.l_bt_left,
+.l_bt_right,
+.r_bt_left,
+.r_bt_right {
+	width: 48%;
+	padding-top: 0.3rem;
+	position: relative;
+	text-align: center;
+	margin-right: 0.1rem;
+}
+
+.l_bt_left img,
+.l_bt_right img,
+.r_bt_left img,
+.r_bt_right img {
+	width: 80%;
+	height: 80%;
+}
+
+.l_bt_left span,
+.l_bt_right span,
+.r_bt_left span,
+.r_bt_right span {
+	left: 0;
+	width: 100%;
+	top: 0.05rem;
+	text-align: center;
+	position: absolute;
+	font-size: 0.1rem;
+	color: #fe4e50;
+	font-weight: 600;
+}
+
+.bg {
+	background-image: url(../img/tttm.png);
+	background-size: 50% 100%;
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.bg img {
+	width: 50%;
+}
+
+.bottom {
+	width: 100%;
+	height: 0.31rem;
+	position: relative;
+	border-top: 1px solid rgb(242, 242, 242);
+	background-color: #FFFFFF;
+	border-radius: 0 0 0.1rem 0.1rem;
+	background-image: url(../img/tt.png);
+	background-repeat: no-repeat;
+	background-position: 0.1rem center;
+	background-size: 0.6rem;
+}
+
+.tt_msg {
+	width: 75%;
+	height: 0.31rem;
+	position: absolute;
+	right: 0rem;
+}
+
+.ttlb1 {
+	width: 0.4rem;
+	height: 0.2rem;
+	line-height: 0.2rem;
+	white-space: nowrap;
+	background-color: #feefec;
+	color: #e86217;
+	border-radius: 0.04rem;
+	padding: 0 0.06rem;
+	font-size: 0.1rem;
+}
+
+.ttlb2 {
+	display: inline-block;
+	width: 1.5rem;
+	text-align: left;
+	font-size: 0.1rem;
+	white-space: nowrap;
+	margin-left: 0.05rem;
+	color: #313131;
+	/* -webkit-box-flex: 1;
+	-webkit-flex: 1;
+	flex: 1; */
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
+.hxh {
+
+	text-align: center;
+	width: 100%;
+	padding: 0.1024rem 0;
+}
+
+.hxh img {
+	width: 1.37rem;
+	height: 0.16rem;
+}
+
+.b_ct2 {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.b_ct2 .b_ct2_1 {
+	width: 48%;
+	margin-bottom: 0.15rem;
+	border-radius: 0.05rem;
+	background-color: #ffffff;
+}
+
+.b_ct2 .b_ct2_1 img {
+	width: 100%;
+	border-radius: 0.05rem 0.05rem 0 0;
+}
+
+.p1 {
+	font-size: 0.1rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+
+.p2 {
+	position: relative;
+	height: 0.4rem;
+	line-height: 0.4rem;
+	padding: 0.1em 0em;
+}
+
+.p2 .price {
+	padding: 0px 0.1rem 0px 0.05rem;
+	color: red;
+	font-size: 0.1rem;
+	display: inline-block;
+}
+
+.p2 .price:before {
+	content: "￥";
+	font-size: 0.1rem;
+}
+
+.p2 .buy {
+	padding: 0px 0.1rem 0px 0.05rem;
+	color: #999999;
+	font-size: 0.1rem;
+	display: inline-block;
+}
+
+.p2 .buy:after {
+	content: "人已购买";
+	font-size: 0.1rem;
+	color: #999999;
+}

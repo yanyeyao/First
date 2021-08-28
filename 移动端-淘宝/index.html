@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/tb.css" />
+		<script src="js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="header0">
+			<div class="header">
+				<div class="head">
+					<div class="h_search">
+						<a href="#">
+							<span class="iconfont icon-fangdajing">寻找宝贝店铺</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="lbt">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="img/lb1.jpg"></div>
+					<div class="swiper-slide"><img src="img/lb2.jpg"></div>
+					<div class="swiper-slide"><img src="img/lb3.jpg"></div>
+					<div class="swiper-slide"><img src="img/lb4.jpg"></div>
+					<div class="swiper-slide"><img src="img/lb5.jpg"></div>
+					<div class="swiper-slide"><img src="img/lb6.jpg"></div>
+					<div class="swiper-slide"><img src="img/lb7.jpg"></div>
+					<div class="swiper-slide"><img src="img/lb8.jpg"></div>
+				</div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+
+		<div class="content1">
+			<div id="list" style="touch-action: none;">
+				<ul id="list_ul">
+					<li>
+						<img src="img/gd1.png">
+						<p>天猫新品</p>
+					</li>
+					<li>
+						<img src="img/jrbk.png">
+						<p>今日爆款</p>
+					</li>
+					<li>
+						<img src="img/tmgj.png">
+						<p>天猫国际</p>
+					</li>
+					<li>
+						<img src="img/elm.png">
+						<p>饿了么</p>
+					</li>
+					<li>
+						<img src="img/tmcs.png">
+						<p>天猫超市</p>
+					</li>
+					<li>
+						<img src="img/fl.png">
+						<p>分类</p>
+					</li>
+					<li>
+						<img src="img/tmms.png">
+						<p>天猫美食</p>
+					</li>
+					<li>
+						<img src="img/aljk.png">
+						<p>阿里健康</p>
+					</li>
+					<li>
+						<img src="img/kbsh.png">
+						<p>口碑生活</p>
+					</li>
+					<li>
+						<img src="img/czzx.png">
+						<p>充值中心</p>
+					</li>
+					<li>
+						<img src="img/jmjd.png">
+						<p>机票酒店</p>
+					</li>
+					<li>
+						<img src="img/jbzy.png">
+						<p>金币庄园</p>
+					</li>
+					<li>
+						<img src="img/alpm.png">
+						<p>阿里拍卖</p>
+					</li>
+					<li>
+						<img src="img/tbch.png">
+						<p>淘宝吃货</p>
+					</li>
+					<li>
+						<img src="img/xy.png">
+						<p>咸鱼</p>
+					</li>
+					<li>
+						<img src="img/hyzx.png">
+						<p>会员中心</p>
+					</li>
+					<li>
+						<img src="img/zdxh.png">
+						<p>造点新货</p>
+					</li>
+					<li>
+						<img src="img/thxs.png">
+						<p>土货鲜食</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="content2">
+
+			<div class="ct2_1">
+				<div class="left" id="left">
+
+				</div>
+				<div class="right" id="right">
+
+				</div>
+
+			</div>
+			<div class="bottom">
+				<div class="tt_msg">
+					<div class="swiper-container2 swiper swiper-no-swiping">
+						<div class="swiper-wrapper" id="swiper-wrapper">
+							<!-- <div class="swiper-slide">
+							<span class="ttlb1">萌宠</span>
+							<span class="ttlb2">为什么唤猫的名字，它总不搭理？</span>
+						</div> -->
+						</div>
+						<!-- Add Pagination -->
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="hxh">
+				<img src="img/hxh.png">
+			</div>
+
+			<div class="b_ct2" id="b_ct2">
+
+			</div>
+		</div>
+	</body>
+	<script src="js/swiper-bundle.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/iscroll.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		$.ajax({
+			type: "get",
+			url: "json1.json",
+			async: false,
+			success: function(r) {
+				console.log(r.List[0])
+				$.each(r.List, function(i, e) {
+					console.log(e)
+					$('<div class="left_div"></div>').html(`
+					<div class="l_top">
+						<img src="` + e.title_img +
+						`" >
+					</div>
+					<div class="l_bt">
+						<div class="l_bt_left">
+							<img src="` + e.img1 +
+						`" >
+							<span>` + e.sp1 + `</span>
+						</div>
+						<div class="l_bt_right">
+							<img src="` + e.img2 +
+						`" >
+							<span>` + e.sp2 + `</span>
+						</div>
+					</div>
+				`).appendTo($('#left'))
+					if (i == 1) {
+						$('.l_top').eq(1).addClass("bg")
+					}
+				})
+
+
+				$.each(r.List2, function(i, e) {
+					console.log(e)
+					$('<div class="right_div"></div>').html(`
+					<div class="r_top">
+						<img src="` + e.title_img +
+						`" >
+					</div>
+					<div class="r_bt">
+						<div class="r_bt_left">
+							<img src="` + e.img1 +
+						`" >
+							<span>` + e.sp1 + `</span>
+						</div>
+						<div class="r_bt_right">
+							<img src="` + e.img2 +
+						`" >
+							<span>` + e.sp2 + `</span>
+						</div>
+					</div>
+				`).appendTo($('#right'))
+				})
+			}
+		})
+		$('.l_bt_left span').eq(0).css("color", "#fe4e50")
+		$('.l_bt_left span').eq(1).css("color", "#fa2a59")
+		$('.l_bt_left span').eq(2).css("color", "#fbb900")
+		$('.l_bt_right span').eq(0).css("color", "#ff7518")
+		$('.l_bt_right span').eq(1).css("color", "#ff4c09")
+		$('.r_bt_left span').eq(0).css("color", "#ff50a7")
+		$('.r_bt_left span').eq(1).css("color", "#50bdff")
+		$('.r_bt_left span').eq(2).css("color", "#ff611d")
+
+		$.ajax({
+			type: "get",
+			url: "json2.json",
+			async: false,
+			success: function(r) {
+				console.log(r.List[0])
+				$.each(r.List, function(i, e) {
+					$('<div class="b_ct2_1"></div>').html(`
+					<img src="` + e.img1 + `" >
+					<p class="p1">` + e.p +
+						`</p>
+					<p class="p2">
+						<span class="price">` + e.sp1 + `</span>
+						<span class="buy">` + e.sp2 +
+						`</span>
+					</p>
+				`).appendTo($('#b_ct2'))
+				})
+
+			}
+		})
+		$.ajax({
+			type: "get",
+			url: "json2.json",
+			async: false,
+			success: function(r) {
+				$.each(r.msg, function(i, e) {
+					$('<div class="swiper-slide"></div>').html(`
+					<span class="ttlb1">` + e.sp1 +
+						`</span>
+					<span class="ttlb2">` + e.sp2 + `</span>
+				`).appendTo($('#swiper-wrapper'))
+				})
+			}
+		})
+		var swiper = new Swiper('.swiper-container', {
+			loop: true,
+			autoplay: {
+				disableOnInteraction: false, //用户拖动轮播图之后继续轮播，该属性默认是true
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+
+				renderBullet: function(index, className) {
+					return '<span class="' + className + '">' + (index + 1) + '</span>';
+				},
+			},
+		});
+		var swiper2 = new Swiper('.swiper-container2', {
+			direction: 'vertical',
+			loop: true,
+			autoplay: {
+				delay: 2000,
+			},
+			clickable: false,
+			keyboardControl: false,
+			noSwiping: true
+		});
+
+
+		var IScroll = new IScroll('#list', {
+			scrollX: true,
+			freeScroll: true,
+			// eventPassthrough: true,
+			// scrollY: false,
+			// preventDefault: false,
+			scrollbars: 'custom',
+		});
+		$(window).resize(function(){
+			console.log($(document.body).width())
+			if($(document.body).width() >= 300 && $(document.body).width() < 360){
+				$("html").css("font-size","100px")
+			}else if($(document.body).width() >= 360 && $(document.body).width() < 420){
+				$("html").css("font-size","110px")
+			}else if($(document.body).width() >= 420 && $(document.body).width() < 500){
+				$("html").css("font-size","120px")
+			}else if($(document.body).width() >= 500 && $(document.body).width() < 560){
+				$("html").css("font-size","210px")
+			}else if($(document.body).width() >= 620 && $(document.body).width() < 680){
+				$("html").css("font-size","220px")
+			}else if($(document.body).width() >= 680 && $(document.body).width() < 720){
+				$("html").css("font-size","230px")
+			}else if($(document.body).width() >= 720 && $(document.body).width() < 780){
+				$("html").css("font-size","240px")
+			}
+		})
+	</script>
+</html>

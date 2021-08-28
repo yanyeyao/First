@@ -1,0 +1,41 @@
+{
+	"List":[{
+		"title_img":"img/jhs.png",
+		"img1":"img/pic1.webp",
+		"img2":"img/pic2.webp",
+		"sp1":"品牌折扣",
+		"sp2":"划算好货"
+	},{
+		"title_img":"img/qg.png",
+		"img1":"img/pic3.webp",
+		"img2":"img/pic4.webp",
+		"sp1":"限时半价",
+		"sp2":"9.9包邮"
+	},{
+		"title_img":"img/hd.png",
+		"img1":"img/pic5.webp",
+		"img2":"img/pic6.webp",
+		"sp1":"挖深的好店",
+		"sp2":""
+	}],
+	
+	"List2":[{
+		"title_img":"img/zb.png",
+		"img1":"img/pic7.webp",
+		"img2":"img/pic8.webp",
+		"sp1":"好物传送门",
+		"sp2":""
+	},{
+		"title_img":"img/yhh.png",
+		"img1":"img/pic9.webp",
+		"img2":"img/pic10.webp",
+		"sp1":"全民口碑推...",
+		"sp2":""
+	},{
+		"title_img":"img/wo.png",
+		"img1":"img/pic11.webp",
+		"img2":"img/pic12.webp",
+		"sp1":"粉丝都爱看",
+		"sp2":""
+	}]
+}
