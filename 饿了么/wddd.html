@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/top.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bottom.css"/>
+		<link rel="stylesheet" type="text/css" href="css/wddd.css"/>
+	</head>
+	<body>
+		<div class="sjlb">
+			我的订单
+		</div>
+		<div class="zwz">
+		
+		</div>
+		
+		<div class="content">
+			<div class="dd-msg">
+				未支付的订单信息：
+			</div>
+			<div class="list">
+				<div class="l-left">
+					<div class="left1">
+						万家饺子(软件园E18店)
+						<span class="iconfont icon-xiala1"></span>
+					</div>
+					
+				</div>
+				<div class="l-right">
+					<span>￥49</span>
+					<span class="qzf">去支付</span>
+				</div>
+			</div>
+			
+			
+			<div class="list">
+				<div class="l-left">
+					<div class="left1">
+						小锅饭豆腐馆(全运店)
+						<span class="iconfont icon-xiala1"></span>
+					</div>
+					
+				</div>
+				<div class="l-right">
+					<span>￥55</span>
+					<span class="qzf">去支付</span>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 已支付订单信息 -->
+		<div class="content content2">
+			<div class="dd-msg">
+				已支付的订单信息：
+			</div>
+			<div class="list">
+				<div class="l-left">
+					<div class="left1">
+						万家饺子(软件园E18店)
+						<span class="iconfont icon-xiala1"></span>
+					</div>
+					
+				</div>
+				<div class="l-right jiner">
+					<span>49</span>
+				</div>
+			</div>
+			<div class="list-msg">
+				
+			</div>
+			
+			<div class="list" style="padding: 0vw 0vw 3vw 0;">
+				<div class="l-left">
+					<div class="left2">
+						<span>配送费</span>
+					</div>
+				</div>
+				<div class="l-right">￥3</div>
+			</div>
+			
+			<div class="list" style="padding:0;">
+				<div class="l-left">
+					<div class="left1">
+						小锅饭豆腐馆(全运店)
+						<span class="iconfont icon-xiala1"></span>
+					</div>
+					
+				</div>
+				<div class="l-right">
+					<span>￥55</span>
+				</div>
+			</div>
+		</div>
+		<div class="zwz">
+			
+		</div>
+		<div class="bottom">
+			<div class="b-list">
+				<span class="iconfont icon-shouye1-copy"></span>
+				<div class="b-msg">首页</div>
+			</div>
+			<div class="b-list">
+				<span class="iconfont icon-faxian"></span>
+				<div class="b-msg">发现</div>
+			</div>
+			<div class="b-list">
+				<span class="iconfont icon-dingdan" style="color: #0097EF;"></span>
+				<div class="b-msg" style="color: #0097EF;">订单</div>
+			</div>
+			<div class="b-list">
+				<span class="iconfont icon-FillCopy"></span>
+				<div class="b-msg">我的</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/tiaozhuan.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		
+		var list_tj = JSON.parse(window.localStorage.getItem("list_tj"))
+		var sumMoney = JSON.parse(window.localStorage.getItem("sumMoney"))
+		$('.jiner').html(sumMoney)
+		console.log(list_tj)
+		$.each(list_tj,function(i,e){
+			$('<div class="list" style="padding: 0vw;"></div>').html(`
+					<div class="l-left" >
+						<div class="left2">
+							<span style="font-size: 2.5vw;">`+e.title+`</span>
+							<span style="margin-left: 1vw; font-size: 2.5vw;" class="beishu">`+e.sl+`</span>
+						</div>
+					</div>
+					<div class="l-right l-right0">`+e.jiner+`</div>
+			`).appendTo($('.list-msg'))
+		})
+	</script>
+</html>

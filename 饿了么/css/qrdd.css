@@ -1,0 +1,118 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,body{
+	width: 100%;
+}
+.ps-msg{
+	background-color: #0097ef;
+	width: 100%;
+	padding: 1vw;
+}
+.psz{
+	color: white;
+	font-size: 3vw;
+}
+.psdz{
+	padding: 1.5vw 0;
+	color: white;
+	font-weight: bold;
+	font-size: 4vw;
+}
+.psdz span{
+	float: right;
+}
+.man span{
+	color: white;
+	font-size: 3vw;
+}
+.name{
+	width: 100%;
+	padding: 3vw 0 3vw 3vw;
+	color: #333;
+	font-size: 3vw;
+	font-weight: 600;
+	border-bottom: 1px solid gray;
+}
+.list{
+	padding: 3vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.l-left{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.left1{
+	width: 20%;
+}
+.left1 img{
+	width: 100%;
+}
+.left2{
+	width: 80%;
+	padding-left: 3vw;
+}
+.sl::before{
+	content: 'x';
+}
+.l-right::before{
+	content: '￥';
+}
+.l-right,.left2 span,.left1{
+	color: #6c767f;
+	font-size: 3vw;
+}
+
+
+.l-right{
+	float: right;
+}
+.l-right::before{
+	content: '￥';
+}
+.bottom{
+	height: 12vw;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+}
+.b-top{
+	height: 2vw;
+}
+.b-bottom{
+	height: 10vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	width: 100%;
+}
+.b-b-left{
+	line-height: 10vw;
+	text-align: center;
+	padding-left: 4vw;
+	padding-bottom: 2vw;
+	flex: 2;
+	background-color: #505051;
+	position: relative;
+	color: white;
+	font-weight: bold;
+	font-size: 3vw;
+}
+.b-b-left::before{
+	content: '￥';
+}
+.b-b-right{
+	flex: 1;
+	background-color: #38ca73;
+	text-align: center;
+	line-height: 10vw;
+	color: white;
+	font-weight: bold;
+	font-size: 3vw;
+}

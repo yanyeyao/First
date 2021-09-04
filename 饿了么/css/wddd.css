@@ -1,0 +1,62 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.content{
+	padding: 3vw;
+}
+.dd-msg{
+	font-size: 3vw;
+	color: #6c767f;
+}
+.list{
+	padding: 3vw 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.l-left{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.left2{
+	padding-left: 3vw 0;
+	font-size: 3vw;
+}
+.l-right,.left1{
+	color: #333;
+	font-size: 4vw;
+}
+.jiner::before{
+	content: '￥';
+}
+.beishu::before{
+	content: 'x';
+}
+.l-right0::before{
+	content: '￥';
+}
+.zfb{
+	width: 8vw;
+	height: 8vw;
+	background-color: #3190E8;
+}
+.l-right{
+	float: right;
+}
+.qzf{
+	background-color: #ff9900;
+	color: white;
+	border-radius: 5px;
+}
+.l-right-2{
+	width: 3vw;
+	height: 3vw;
+	background-color: #38ca73;
+	border-radius: 50%;
+}
+.content2{
+	margin-top: 5vw;
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/bottom.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<title></title>
+	</head>
+	<body>
+		<div class="top">
+			<div class="dw">
+				<span class="iconfont icon-didian wz-icon"></span>
+				<span class="wz">沈阳市规划大厦</span>
+				<span class="iconfont icon-xiala1 wz-xl"></span>
+			</div>
+		</div>
+		<div class="search">
+			<!-- <span class="iconfont icon-fangdajing fdj"></span> -->
+			<input type="text" placeholder="搜索饿了么商家,商品名称" />
+		</div>
+		<div class="content">
+			<div class="list">
+				<div class="list-t" id="list_t">
+
+				</div>
+			</div>
+
+
+			<div class="pztc">
+				<div class="p1">品质套餐</div>
+				<div class="p2">搭配齐全吃得好</div>
+				<div class="p3">立即抢购></div>
+			</div>
+
+			<!-- 吃得好 -->
+			<div class="vip">
+				<div class="vip-l">
+					<div class="vip-img">
+						<img src="img/super_member.png">
+					</div>
+					<div class="vip-msg">
+						<span class="sup-vip">超级会员</span>
+						<span class="quanyi"> 每月享超值权益</span>
+					</div>
+				</div>
+				<div class="vip-r">
+					<div class="go">
+						<span class="go">立即开通></span>
+					</div>
+				</div>
+
+			</div>
+
+
+
+		</div>
+		<div class="content2">
+			<!-- 推荐商家 -->
+			<div class="tuijian">
+				<p class="tjsj">-- 推荐商家 --</p>
+				<div class="tj-list">
+					<span id="zh_xiala" class="">综合排序<span class="iconfont icon-xiala1 zh-xl"></span></span>
+					<span>距离最近</span>
+					<span>销量最高</span>
+					<span>筛选 <span class="iconfont icon-shaixuan"></span></span>
+					<div class="xiala">
+						<div class="xiala_xz dagou"><span>综合排序</span><span class="gg">√</span></div>
+						<div class="xiala_xz"><span>销量最高</span><span class="gg">√</span></div>
+						<div class="xiala_xz"><span>距离最近</span><span class="gg">√</span></div>
+						<div class="xiala_xz"><span>好评如潮</span><span class="gg">√</span></div>
+						<div class="xiala_xz"><span>起送价最低</span><span class="gg">√</span></div>
+					</div>
+				</div>
+				<div class="tj_content">
+					
+				</div>
+
+
+			</div>
+
+
+		</div>
+
+		<div class="zwz">
+
+		</div>
+		<div class="bottom">
+			<div class="b-list">
+				<span class="iconfont icon-shouye1-copy" style="color: #0097EF;"></span>
+				<div class="b-msg" style="color: #0097EF;">首页</div>
+			</div>
+			<div class="b-list">
+				<span class="iconfont icon-faxian"></span>
+				<div class="b-msg">发现</div>
+			</div>
+			<div class="b-list">
+				<span class="iconfont icon-dingdan"></span>
+				<div class="b-msg">订单</div>
+			</div>
+			<div class="b-list">
+				<span class="iconfont icon-FillCopy"></span>
+				<div class="b-msg">我的</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//页面跳转
+		$(document).on('click','.list-msg',function(){
+			console.log(1)
+			window.location.href = "sjxx.html"
+		})
+	
+		
+		
+		// 数据请求
+		$.ajax({
+			type: 'get',
+			url: 'message.json',
+			success: function(r) {
+				console.log(r)
+				$.each(r.index_nav, function(i, e) {
+					$('<div class="lt"></div>').html(`
+						<img src="${e.img}" width="80%">
+						<p>` + e.t +`</p>
+					`).appendTo($('#list_t'))
+
+				})
+			}
+
+		})
+		
+		$.ajax({
+			type:'get',
+			url:'message.json',
+			success:function(r){
+				console.log(r)
+				$.each(r.tj_list,function(i,e){
+					$('<div class="list-msg"></div>').html(`
+						<div class="lm-left">
+							<img src="`+e.img+`">
+						</div>
+						<div class="lm-right">
+							<p class="r-p1">
+								`+e.m+`
+								<span class="xiaodian"></span>
+							</p>
+							<p class="r-p2">
+								<span class="star">`+e.star+`</span>
+								<span class="pf">`+e.pf+`</span>
+								<span class="sale">`+e.sale+`</span>
+								<span class="ps">`+e.ps+`</span>
+							</p>
+							<div class="r-p3">
+								<span class="qisong">`+e.qisong+`</span>
+								<span>|</span>
+								<span class="psf">`+e.psf+`</span>
+								<p>
+									<span class="juli">`+e.juli+`</span>
+									<span>|</span>
+									<span class="shijain">`+e.shijian+`</span>
+								</p>
+							</div>
+							<p class="r-p4">
+								<span class="biaoqian">`+e.biaoqian+`</span>
+							</p>
+							<p class="r-p5">
+								<span class="xin">`+e.xin+`</span>
+								<span class="xinren">`+e.xinren+`</span>
+								<span class="huodong">`+e.huodong+`</span>
+							</p>
+							<p class="r-p6">
+								<span class="tj">`+e.tj+`</span>
+								<span class="tejia">`+e.tejia+`</span>
+							</p>
+					`).appendTo($('.tj_content'))
+				})
+			}
+		})
+
+
+
+
+		$('#zh_xiala').click(function() {
+			console.log(1)
+			$('.xiala').slideToggle(300)
+			$('#zh_xiala').toggleClass("color_qh")
+		})
+		$('.xiala_xz').click(function() {
+			$('.xiala_xz').eq($(this).index()).addClass('dagou').siblings().removeClass('dagou')
+
+			$('.xiala_xz').children().css('color', '#555555')
+			$('.xiala_xz').eq($(this).index()).children().css('color', '#0097EF')
+			$('#zh_xiala').html($(this).children().eq(0).html() + '<span class="iconfont icon-xiala1 zh-xl"></span>').css(
+				"color", "#0097EF").children().css("color", "#0097EF")
+
+		})
+		
+	
+	</script>
+	<script src="js/tiaozhuan.js" type="text/javascript" charset="utf-8"></script>
+</html>

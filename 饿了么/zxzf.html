@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/top.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bottom.css"/>
+		<link rel="stylesheet" type="text/css" href="css/zxzf.css"/>
+	</head>
+	<body>
+		<div class="sjlb">
+			在线支付
+		</div>
+		<div class="zwz">
+		
+		</div>
+		
+		<div class="content">
+			<div class="dd-msg">
+				订单信息：
+			</div>
+			<div class="list">
+				<div class="l-left">
+					<div class="left1">
+						万家饺子(软件园E18店)
+						<span class="iconfont icon-xiala1 icon-size"></span>
+					</div>
+					
+				</div>
+				<div class="l-right jiner">49</div>
+			</div>
+			<div class="list_msg">
+				
+				
+			</div>
+			<div class="list">
+				<div class="l-left">
+					<div class="left1 zfb"></div>
+					<div class="left2" style="padding-left: 4vw;">
+						支付宝
+					</div>
+				</div>
+				<div class="l-right l-right-2"></div>
+			</div>
+			<div class="list">
+				<div class="l-left">
+					<div class="left1 zfb wx"></div>
+					<div class="left2" style="padding-left: 4vw;">
+						微信支付
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class="queren">
+				确认支付
+			</div>
+		</div>
+		<div class="zwz">
+			
+		</div>
+		<div class="bottom">
+			<div class="b-list">
+				<span class="iconfont icon-shouye1-copy"></span>
+				<div class="b-msg">首页</div>
+			</div>
+			<div class="b-list">
+				<span class="iconfont icon-faxian"></span>
+				<div class="b-msg">发现</div>
+			</div>
+			<div class="b-list">
+				<span class="iconfont icon-dingdan"></span>
+				<div class="b-msg">订单</div>
+			</div>
+			<div class="b-list">
+				<span class="iconfont icon-FillCopy"></span>
+				<div class="b-msg">我的</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var sumMoney = JSON.parse(window.localStorage.getItem("sumMoney"))
+		var list_tj = JSON.parse(window.localStorage.getItem("list_tj"))
+		console.log(sumMoney)
+		console.log(list_tj)
+		$.each(list_tj,function(i,e){
+			$('<div class="list" style="padding: 0vw;"></div>').html(`
+					<div class="l-left" >
+						<div class="left2">
+							<span style="font-size: 2.5vw;">`+e.title+`</span>
+							<span style="margin-left: 1vw; font-size: 2.5vw;" class="beishu">`+e.sl+`</span>
+						</div>
+					</div>
+					<div class="l-right l-right0">`+e.jiner+`</div>
+			`).appendTo($('.list_msg'))
+			
+			
+		})
+		$('.jiner').html(sumMoney)
+		//页面跳转至我的订单
+		$(document).on('click','.queren',function(){
+			console.log(1)
+			window.location.href = "wddd.html"
+			
+		})
+	</script>
+</html>

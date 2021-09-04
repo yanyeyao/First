@@ -1,0 +1,50 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.form{
+	height: 40vw;
+	padding: 2vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-bottom: 2vw;
+}
+.lg-1,.lg-2,.lg-3,.lg-4{
+	display: flex;
+	flex-direction: row;
+	padding: 2vw 0;
+}
+
+label{
+	width: 20%;
+	font-size: 3vw;
+}
+.form input{
+	width: 80%;
+	height: 100%;
+	outline: none;
+	border: none;
+	
+}
+.lg-4{
+	font-size: 3vw;
+}
+.lg-4 input{
+	width: 8vw;
+}
+.btn{
+	width: 100%;
+	padding: 0 2vw;
+}
+.regist{
+	width: 100%;
+	background-color: #38ca73;
+	border-radius: 5px;
+	text-align: center;
+	padding: 2vw 2vw;
+	color: white;
+	font-size: 3vw;
+	margin-bottom: 4vw;
+}

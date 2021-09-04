@@ -1,0 +1,79 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.content{
+	padding: 3vw;
+}
+.dd-msg{
+	font-size: 3vw;
+	color: #6c767f;
+}
+.list{
+	padding: 3vw 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.l-left{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.icon-size{
+	font-size: 2vw;
+}
+.left2{
+	padding-left: 3vw 0;
+	font-size: 3vw;
+}
+.beishu::before{
+	content: 'x';
+}
+.l-right,.left1{
+	color: #333;
+	font-size: 3vw;
+}
+.l-right0::before{
+	content: '￥';
+}
+.zfb{
+	background-image: url(../img/zfb-icon.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 80% 80%;
+	width: 8vw;
+	height: 8vw;
+}
+.wx{
+	background-image: url(../img/weixin.png);
+}
+.jiner::before{
+	content: '￥';
+}
+.l-right{
+	color: red;
+}
+.l-right{
+	float: right;
+}
+.l-right-2{
+	width: 5vw;
+	height: 5vw;
+	background-image: url(../img/cg.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% 100%;
+	border-radius: 50%;
+}
+.queren{
+	margin-top: 4vw;
+	width: 100%;
+	background-color: #38ca73;
+	border-radius: 5px;
+	text-align: center;
+	padding: 2vw 0;
+	color: white;
+	font-size: 3vw;
+}

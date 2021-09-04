@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/top.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sjxx.css"/>
+		
+	</head>
+	<body>
+		<div class="sjlb">
+			商家信息
+		</div>
+		<div class="zwz">
+		
+		</div>
+		
+		<div class="top">
+			<div class="t-img">
+				<img src="img/sj01.png" >
+			</div>
+			<div class="t-d1">
+				万家饺子（软件圆E18店）
+			</div>
+			<div class="t-d2">
+				<span class="qisong">￥15起送</span>
+				<span>|</span>
+				<span>￥3配送</span>
+			</div>
+			<div class="t-d3">
+				各种饺子炒菜
+			</div>
+		</div>
+		<div class="list_ct">
+			
+			
+		</div>
+		
+		<div class="zwz">
+			
+		</div>
+		<div class="bottom">
+			<div class="b-top">
+				
+			</div>
+			<div class="b-bottom">
+				<div class="b-b-left">
+					<div class="gwc">
+						<span class="iconfont icon-gouwuche1 gwc-icon"></span>
+						<div class="wh">
+							0
+						</div>
+					</div>
+					<div class="gwc2">
+						<div class="money">0</div>
+						<div class="peisong">
+							另需配送费3元
+						</div>
+					</div>
+					
+				</div>
+				<div class="b-b-right">
+					去结算
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		
+		
+		
+		
+		
+		$(function(){
+			
+			
+			
+			var num = 0;
+			var total_num = 0;
+			var total = 0;
+			var money = 0;
+			//减操作
+			$(document).on('click','.jian',function(){
+				
+				num = parseInt($(this).parent().children().eq(1).html())
+				num--;
+				if(num == 0){
+					$('.list').eq($('.jian').index($(this))).removeClass('flag')
+					$('.jian').eq($('.jian').index($(this))).hide()
+					$('.shuliang').eq($('.jian').index($(this))).hide()
+				}
+				$('.shuliang').eq($('.jian').index($(this))).html(num)
+				
+				total_money();
+				$('.wh').html(total_num)
+				calculate()
+			})
+			//加操作
+			$(document).on('click','.jia',function(){
+				
+				$('.list').eq($('.jia').index($(this))).addClass('flag')
+				$('.jian').eq($('.jia').index($(this))).show()
+				$('.shuliang').eq($('.jia').index($(this))).show()
+				num = parseInt($(this).parent().children().eq(1).html())
+				num++;
+				$('.shuliang').eq($('.jia').index($(this))).html(num)
+				
+				total_money();
+				$('.wh').html(total_num)
+				calculate()
+			})
+			// 总金额
+			function total_money(){
+				total = 0;
+				total_num = 0;
+				for(var i = 0; i<$('.list').length; i++){
+					num = parseInt($('.shuliang').eq(i).html())
+					money = parseFloat($('.d3').eq(i).html())
+					total_num += num
+					total =total + num*money
+					
+				}
+				$('.money').html(total)
+			}
+			// 微徽显示的个数 (该代码为种类数量显示)
+			// function calculate(){
+			// 	// total_dian = 0;
+			// 	// for(var i = 0; i<$('.list').length; i++){
+			// 	// 	if($('.shuliang').eq(i).hasClass('flag')){
+			// 	// 		total_dian++
+			// 	// 	}
+			// 	// }
+			// 	return total_dian;
+			// }
+			
+			
+			
+			//请求数据
+			$.ajax({
+				type:'get',
+				url:'message.json',
+				success:function(r){
+					console.log(r.sjxx_list)
+					$.each(r.sjxx_list,function(i,e){
+						
+						$('<div class="list"></div>').html(`
+							<div class="jiaru">
+								<span class="jian hide_sp">-</span>
+								<span class="shuliang hide_sp">0</span>
+								<span class="jia">+</span>
+							</div>
+							<div class="list-l">
+								<img src="img/`+e.src+`.png">
+							</div>
+							<div class="list-r">
+								<div class="d1">`+e.title+`</div>
+								<div class="d2">
+									<span class="qisong">`+e.msg+`</span>
+								</div>
+								<div class="d3">`+e.money+`</div>
+							</div>
+						`).appendTo($('.list_ct'))
+					})
+				}
+			})
+			
+			var All = JSON.parse(window.localStorage.getItem("allList"))
+			console.log(All)
+			//获取添加的数据
+			var list_tj = [];
+			
+			function calculate(){
+				list_tj = []
+				for(var i = 0; i<$('.list').length; i++){
+					if($('.list').eq(i).hasClass('flag')){
+						var sl = $('.list').eq(i).children().eq(0).children().eq(1).html()
+						var img_src = $('.list').eq(i).children().eq(1).children().eq(0).attr('src')
+						var title = $('.list').eq(i).children().eq(2).children().eq(0).html()
+						var jiner = $('.list').eq(i).children().eq(2).children().eq(2).html()
+						
+						list_tj.push({sl:sl,img_src:img_src,title:title,jiner:jiner})
+					}
+				}
+			}
+			
+			//页面跳转至确认订单
+			$(document).on('click','.b-b-right',function(){
+				console.log(1)
+				window.location.href = "qrdd.html"
+				window.localStorage.setItem("list_tj", JSON.stringify(list_tj))
+			})
+			
+		})
+		
+	</script>
+</html>
