@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			html,
+			body {
+				height: 100%;
+				width: 100%;
+
+			}
+
+			.d1 {
+				margin: 0 auto;
+				width: 520px;
+				background-color: white;
+				padding: 20px;
+				box-shadow: rgb(0 0 0 / 20%) 0 5px 6px 0;
+			}
+
+			h2 {
+				text-align: center;
+				margin-bottom: 20px;
+			}
+
+			.input-div {
+				text-align: center;
+
+			}
+
+			.input-div input {
+				outline: none;
+				border: 1px solid #999999;
+				width: 100%;
+				line-height: 1.4em;
+				padding: 6px;
+				box-shadow: rgb(0 0 0 / 20%) 0 1px 2px 0 inset;
+				box-sizing: border-box;
+				font-size: 24px;
+			}
+
+			.todos {
+				width: 100%;
+			}
+
+			.todo {
+				padding: 20px 20px 11px 0;
+				position: relative;
+				font-size: 24px;
+				line-height: 1.1em;
+				border-bottom: 1px solid #cccccc;
+			}
+
+			.bottom {
+				padding-top: 20px;
+				display: flex;
+				justify-content: space-between;
+			}
+
+			.bottom span {
+				color: #777;
+				font-size: 14px;
+			}
+
+			.b-right {
+				text-decoration: underline
+			}
+
+			.d2 {
+				text-align: center;
+				color: #777777;
+				margin-top: 50px;
+			}
+			
+			.close {
+				position: absolute;
+				right: 5px;
+				top: 22px;
+				display: none;
+				cursor: pointer;
+				width: 20px;
+				height: 20px;
+				background: url(img/destroy.png) no-repeat 0 0;
+			}
+			.close:hover{
+				background-position: 0 -20px;
+			}
+			.todo:hover .close{
+				display: block;
+			}
+			.line{
+				color: #777777;
+				text-decoration: line-through;
+			}
+			.editDiv{
+				width: 100%;
+				height: 100%;
+				bo
+			}
+			.input1{
+				position: absolute;
+				padding-left: 10px;
+				box-sizing: border-box;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				font-size: 24px;
+				/* display: none; */
+			}
+			.inp_show{
+				/* display: inline-block; */
+			}
+		</style>
+	</head>
+	<body style="background-color: #eeeeee;">
+		<div id="box">
+			<div class="d1">
+				<h2>Todos</h2>
+				<div class="input-div">
+					<input type="text"  placeholder="What needs to be done?"  @keydown.enter="enterFun()" v-model="listMsg"/>
+
+				</div>
+				<div class="todos">
+					<div class="todo" v-for="(item, index) in list" @dblclick="shuangji(index, $event)">
+						<input type="checkbox" @click="checkBox(index, $event)"/>
+						<span>{{ item.toDo }}</span>
+						<span class="close" @click="del(index, $event)"></span>
+						<input type="text" v-model="item.toDo" class="input1" @blur="blur(index, $event)" v-if="item.show_inp" ref="gain" @keydown.enter="enterFun2(index)" />
+					</div>
+					
+				</div>
+				<div class="bottom">
+					<span class="b-left"><span style="font-weight: 600;">{{ count }}</span> items left</span>
+					<span class="b-right">Clear <span>{{ list.length - count }}</span> completed items</span>
+				</div>
+			</div>
+			<div class="d2">
+				Double-click to edit a todo.
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-3.5.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://unpkg.com/vue@next"></script>
+	<script type="text/javascript">
+		const vm = Vue.createApp({
+			data() {
+				return{
+					count: 0,
+					listMsg: '',
+					list: [{line: false, toDo:'吃饭睡觉', show_inp: false},{line: false, toDo:'唱歌跳舞', show_inp: false}],
+					new_list:{line: false, toDo: '', show_inp: false},
+					fc: false,
+				}
+			},
+			methods: {
+				shuangji(i, e){
+					
+					this.list[i].show_inp = true
+					this.$nextTick( () =>{
+					    this.$refs.gain.focus()
+					})
+					
+				},
+				blur(i, e){
+					this.list[i].show_inp = false
+				},
+				enterFun2(i){
+					this.list[i].show_inp = false
+				},
+				checkBox(i, e){
+					console.log(this.list.length)
+					if(!this.list[i].line){
+						e.currentTarget.nextElementSibling.classList.add('line')
+						this.count++
+						this.list[i].line = !this.list[i].line
+					}else{
+						e.currentTarget.nextElementSibling.classList.remove('line')
+						this.list[i].line = !this.list[i].line
+						this.count--
+					}
+					
+				},
+				enterFun(){
+					
+					this.new_list.toDo = this.listMsg
+					console.log(this.new_list.toDo)
+					this.list.push(this.new_list)
+					this.new_list = {line: false, toDo: '', show_inp: false}
+				},
+				del(ind, e){
+					this.list.splice(ind, 1)
+				
+					if(e.currentTarget.previousElementSibling.getAttribute("class").includes("line")){
+						this.count--
+					}
+				},
+				
+			},
+		})
+		// 注册一个全局自定义指令 `v-focus`
+		// vm.directive('focus', {
+		//   // 当被绑定的元素插入到 DOM 中时……
+		//   inserted: function (el) {
+		// 	  console.log(el)
+		//     // 聚焦元素
+		// 		el.focus()
+				
+		//   }
+		// })
+		vm.mount('#box')
+	</script>
+</html>
